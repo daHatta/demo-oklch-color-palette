@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo for okLCH Color Palettes</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="prefetch" href="./fonts/fontello.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="primary-header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a class="logo-link" href="#">My Logo</a>
+                </div>
+                <nav>
+                    <ul role="list" class="nav-list" aria-label="navigation links">
+                        <li><a class="nav-link" href="#">Projects</a></li>
+                        <li><a class="nav-link" href="#">About Me</a></li>
+                        <li><a class="nav-link" href="#">Testimonials</a></li>
+                        <li><a class="nav-link" href="#">Contact Me</a></li>
+                    </ul>
+                </nav>
+                <button type="button" class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="hero even-columns">
+                    <div class="cta">
+                        <h1>Demo for CSS Color Palettes</h1>
+                        <h2>oklch() Color Function Level 4</h2>
+                        <p>My personal start in order to try to simplify my workflow for creating color palettes by using the oklch() color function.
+                            Based on the Youtube GUI Challenge by <strong>Adam Argyleink</strong> <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE" target="_blank"><i class="icon-youtube-play"></i></a>
+                            and recommendations for color palettes by <strong>Jordan Bowman</strong> <a href="https://www.youtube.com/watch?v=yYwEnLYT55c" target="_blank"><i class="icon-youtube-play"></i></a>.
+                            This template contains some dummy areas like a navbar, a hero section and serveral cards which are influenced by the color choice represented by the hue-value.
+                            For now it is possible to check the prefered color scheme (light or dark) by toogling the common rendering emulations under the dev tools.
+                        </p>
+                        <button type="button" class="btn btn-cta">Call To Action</button>
+                    </div>
+                    <article class="card">
+                        <h2>What is oklch()?</h2>
+                        <small>Lightness - Chroma - Hue / Opacity</small>
+                        <p>One of the new CSS color Level 4 functions is the oklch() function which uses the Oklch cylindrical coordinate model.
+                            It is specified by Oklab Lightness in percent, by an radius representing chroma and an hue angle. The opacity can be
+                            set additionally.
+                        </p>
+                        <div class="code">
+                            <span class="code-language">CSS</span>
+                            <pre>
+                                <code>
+                                    p {
+                                        &nbsp;&nbsp;&nbsp;&nbsp;/* oklch(Lightness Chroma Hue / Opacity) */
+                                        &nbsp;&nbsp;&nbsp;&nbsp;color: oklch(33% 0.1 0 / .5);
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="card-bar">
+                            <a href="https://www.w3.org/TR/css-color-4/#funcdef-oklch" target="_blank"><i class="icon-link"></i>Specification</a>
+                            <a href="https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl" target="_blank"><i class="icon-link"></i>OKLCH in CSS</a>
+                            <a href="https://oklch.com/#70,0.1,340,100" target="_blank"><i class="icon-link"></i>OKLCH Picker</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Color-Palettes</h2>
+                <p>As recommended by Jordan Bowman, colors used in webprojects are distinguished in brand, accent and supporting colors.</p>
+                <ul role="list">
+                    <li><strong>Brand Colors:</strong> should be used for buttons, links, navigation and icons.</li>
+                    <li><strong>Accent Colors:</strong> recommended for headlines and design elements.</li>
+                    <li><strong>Supporting Colors:</strong> which should be used for feedbacks to an user like success or error messages.</li>
+                </ul>
+                <p>Not mentioned, but very useful, are neutral colors like white and black and different shades of grey, which should be used as
+                    supporting colors to the design of an application.
+                </p>
+                <p><small>Opacity was not taken into account in this project. For now. :)</small></p>
+                <div class="color-setting">
+                    <h3>Change a Hue Value For:</h3>
+                    <div class="hue-setting-wrapper">
+                        <div class="hue-for-brand">
+                            <label for="brand">Brand:</label>
+                            <input type="number" id="brand" name="brand" min="0" max="360" value="">
+                            <button type="button" id="brand-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                        <div class="hue-for-accent">
+                            <label for="accent">Accent:</label>
+                            <input type="number" id="accent" name="accent" min="0" max="360" value="">
+                            <button type="button" id="accent-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                        <div class="hue-for-success">
+                            <label for="success">Success:</label>
+                            <input type="number" id="success" name="success" min="111" max="175" value="">
+                            <button type="button" id="success-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                        <div class="hue-for-failure">
+                            <label for="failure">Failure:</label>
+                            <input type="number" id="failure" name="failure" min="0" max="36" value="">
+                            <button type="button" id="failure-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                        <div class="hue-for-warning">
+                            <label for="warning">Warning:</label>
+                            <input type="number" id="warning" name="warning" min="37" max="91" value="">
+                            <button type="button" id="warning-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                        <div class="hue-for-info">
+                            <label for="info">Info:</label>
+                            <input type="number" id="info" name="info" min="190" max="282" value="">
+                            <button type="button" id="info-btn" class="btn btn-secondary">Change</button>
+                        </div>
+                    </div>
+                </div>
+                <p><small>Hue-Values for Brand- and Accent-color have a range of 0-360. All others have a limited range: Success (111-175),
+                    Failure (0-36), Warning (37-91) und Info (190-282).</small>
+                </p>
+                <div class="palette-wrapper">
+                    <h3>Brand Colors</h3>
+                    <div class="palette brand">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Accent Colors</h3>
+                    <div class="palette accent">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Neutral Colors</h3>
+                    <div class="palette neutral">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Support Color: Success</h3>
+                    <div class="palette success-color">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Support Color: Failure</h3>
+                    <div class="palette failure-color">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Support Color: Warning</h3>
+                    <div class="palette warning-color">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                    <h3>Support Color: Information</h3>
+                    <div class="palette info-color">
+                        <div class="swatch">000</div>
+                        <div class="swatch">100</div>
+                        <div class="swatch">200</div>
+                        <div class="swatch">300</div>
+                        <div class="swatch">400</div>
+                        <div class="swatch">500</div>
+                        <div class="swatch">600</div>
+                        <div class="swatch">700</div>
+                        <div class="swatch">800</div>
+                        <div class="swatch">900</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="even-columns">
+                    <div class="success">
+                        <div class="card color">
+                            <i class="icon-ok-circled"></i>
+                            <div class="card-content">
+                                <p>
+                                    <strong>Success:</strong>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, libero laboriosam veniam molestias, repellat eligendi assumenda porro labore ab repudiandae ratione quibusdam pariatur, quo temporibus.
+                                    <a href="#">Link</a>
+                                </p>
+                                <div class="card-bar">
+                                    <button type="button" class="btn btn-success">Button</button>
+                                    <a href="#">Link</a>
+                                </div>
+                            </div>
+                            <i class="icon-cancel"></i>
+                        </div>
+                    </div>
+                    <div class="failure">
+                        <div class="card color">
+                            <i class="icon-minus-circled"></i>
+                            <div class="card-content">
+                                <p>
+                                    <strong>Failure:</strong>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut pariatur, reprehenderit autem officiis fugiat dicta officia consequuntur, nulla similique et explicabo at! Architecto, nesciunt minus!
+                                    <a href="#">Link</a>
+                                </p>
+                                <div class="card-bar">
+                                    <button type="button" class="btn btn-failure">Button</button>
+                                    <a href="#">Link</a>
+                                </div>
+                            </div>
+                            <i class="icon-cancel"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="even-columns">
+                    <div class="warning">
+                        <div class="card color">
+                            <i class="icon-attention"></i>
+                            <div class="card-content">
+                                <p>
+                                    <strong>Warning:</strong>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab velit quam sit harum obcaecati totam eveniet nesciunt laudantium delectus, amet minima ipsa? Consequuntur, quod odio.
+                                    <a href="#">Link</a>
+                                </p>
+                                <div class="card-bar">
+                                    <button type="button" class="btn btn-warning">Button</button>
+                                    <a href="#">Link</a>
+                                </div>
+                            </div>
+                            <i class="icon-cancel"></i>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="card color">
+                            <i class="icon-info-circled"></i>
+                            <div class="card-content">
+                                <p>
+                                    <strong>Information:</strong>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex laudantium ea quia enim aut minus eligendi totam quisquam incidunt, excepturi nemo nisi saepe facilis at?
+                                    <a href="#">Link</a>
+                                </p>
+                                <div class="card-bar">
+                                    <button type="button" class="btn btn-info">Button</button>
+                                    <a href="#">Link</a>
+                                </div>
+                            </div>
+                            <i class="icon-cancel"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="primary-footer">
+        <div class="container">
+            <div class="even-columns">
+                <div class="contact-data">
+                    <h3>Contact Data</h3>
+                    <address id="hcard" class="vcard">
+                        <a class="url fn n" href="#" target="_blank">
+                            <span class="given-name">Firstname</span>
+                            <span class="additional-name">Middlename</span>
+                            <span class="family-name">Name</span>
+                            <span class="profession"><abbr>Esq.</abbr></span>
+                        </a>
+                        <a class="email" href="mailto:">
+                            <i class="icon-mail-alt"></i>
+                            email@address.com
+                        </a>
+                        <a class="adr" href="https://maps.google.com/?cid=17983575966565801317" target="_blank">
+                            <i class="icon-location"></i>
+                            <span class="street-address">No. Street</span><br>
+                            <span class="locality">Town</span>
+                            , 
+                            <span class="region">State</span>
+                            , 
+                            <span class="postal-code">Code</span>
+                            <span class="country-name">Country</span>
+                        </a>
+                        <a class="tel" href="tel:+12153484900">
+                            <i class="icon-phone"></i>
+                            +1 (215) 348-4900
+                        </a>
+                    </address>
+                </div>
+                <div class="footer-nav">
+                    <h3>Topics</h3>
+                    <ul role="list">
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="social-wrapper">
+                    <h3>Social Media Channels</h3>
+                    <ul role="list">
+                        <li><a href="#"><i class="icon-facebook"></i>facebook</a></li>
+                        <li><a href="#"><i class="icon-twitter"></i>twitter</a></li>
+                        <li><a href="#"><i class="icon-instagram"></i>instagram</a></li>
+                        <li><a href="#"><i class="icon-youtube-play"></i>youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <svg width="4%" height="4%" viewBox="0 0 298 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <g>
+                        <path style="fill:var(--clr-footer-logo);" d="M149,0.5c81.959,0 148.5,66.541 148.5,148.5c0,81.959 -66.541,148.5 -148.5,148.5c-81.959,0 -148.5,-66.541 -148.5,-148.5c0,-81.959 66.541,-148.5 148.5,-148.5Zm-10.03,92.372l32.309,-32.309l40.387,40.387c31.206,31.206 31.206,81.876 -0,113.082c-31.206,31.206 -81.877,31.206 -113.083,0l-0.223,-0.222l0.003,-0.003c-4.237,-4.474 -4.164,-11.546 0.22,-15.929c4.383,-4.384 11.456,-4.457 15.929,-0.22l0.003,-0.003l0.223,0.223c22.29,22.29 58.483,22.29 80.773,-0c22.29,-22.29 22.29,-58.484 -0,-80.774l-24.232,-24.232l-16.155,16.155l24.232,24.232c4.458,4.458 4.458,11.697 0,16.155c-4.458,4.458 -11.696,4.458 -16.154,-0l-24.232,-24.232l-16.155,16.154l24.232,24.232c4.458,4.458 4.458,11.697 -0,16.155c-4.458,4.458 -11.697,4.458 -16.155,0l-24.232,-24.232l-24.525,24.526l-0.006,-0.006c-4.476,4.168 -11.496,4.072 -15.855,-0.288c-4.36,-4.36 -4.456,-11.379 -0.289,-15.856l-0.005,-0.005l24.526,-24.526l-24.232,-24.232c-4.458,-4.458 -4.458,-11.696 -0,-16.154c4.458,-4.458 11.696,-4.458 16.154,-0l24.232,24.232l16.155,-16.155l-24.232,-24.232c-4.458,-4.458 -4.458,-11.697 -0,-16.155c4.458,-4.458 11.697,-4.458 16.155,0l24.232,24.232Z">
+                    </g>
+                </svg>
+            </div>
+            <p>Build by Heiko John in 2023/06</p>
+        </div>
+    </footer>
+</body>
+</html>
