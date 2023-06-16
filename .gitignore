@@ -49,12 +49,4 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode
 
-oklch-palette.css
-info-color-palette.txt
-assets/android-chrome-192x192.png
-assets/android-chrome-512x512.png
-assets/apple-touch-icon.png
-assets/favicon-16x16.png
-assets/favicon-32x32.png
-assets/favicon_io.zip
-assets/site.webmanifest
+
