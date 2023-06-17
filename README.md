@@ -3,7 +3,9 @@
 
 ## oklch() Color Function Level 4
 
-![Screenshot of the template](./assets/oklch-app.jpg?raw=true)
+<p align="center">
+    <img src="./assets/oklch-app.jpg?raw=true" alt="Screenshot of the app">
+</p>
 
 
 My personal start in order to try to simplify my workflow for creating color palettes by using the oklch() color function. Based on the Youtube GUI Challenge by **Adam Argyleink** ([Youtube-Link](https://www.youtube.com/watch?v=6aCsAMgwnjE)) and recommendations for color palettes by **Jordan Bowman** ([Youtube-Link](https://www.youtube.com/watch?v=yYwEnLYT55c)). This demo contains some dummy areas like a navbar, a hero section and several cards which are influenced by the color choice represented by the hue-value.
@@ -24,7 +26,7 @@ One of the new CSS color Level 4 functions is the oklch() function which uses th
 
 ## Create Your Color-Palettes
 
-As recommended by Jordan Bowman, colors used in webprojects are distinguished in brand, accent and supporting colors.
+As recommended by **Jordan Bowman**, colors used in webprojects are distinguished in brand, accent and supporting colors.
 
 - **Brand Colors**: should be used for buttons, links, navigation and icons.
 - **Accent Colors**: recommended for headlines and design elements.
