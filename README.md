@@ -4,7 +4,7 @@
 ## oklch() Color Function Level 4
 
 <div style="text-align: center;">
-![Screenshot of the template](https://github.com/daHatta/demo-oklch-color-palette/blob/main/assets/oklch-app.jpg)
+![Screenshot of the template](http://www.john-webservices.de/bilder/oklch-app.jpg)
 </div>
 
 My personal start in order to try to simplify my workflow for creating color palettes by using the oklch() color function. Based on the Youtube GUI Challenge by **Adam Argyleink** ([Youtube-Link](https://www.youtube.com/watch?v=6aCsAMgwnjE)) and recommendations for color palettes by **Jordan Bowman** ([Youtube-Link](https://www.youtube.com/watch?v=yYwEnLYT55c)). This demo contains some dummy areas like a navbar, a hero section and several cards which are influenced by the color choice represented by the hue-value.
