@@ -20,7 +20,7 @@ One of the new CSS color Level 4 functions is the oklch() function which uses th
 
 `oklch(Lightness Chroma Hue / Opacity)`
 
-- [W3 Specification](https://www.w3.org/TR/css-color-4/#funcdef-oklch){:target="_blank" rel="noopener"}
+- [W3 Specification](https://www.w3.org/TR/css-color-4/#funcdef-oklch)
 - [OKLCH in CSS by Andrey Sitnik & Travis Turner](https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl)
 - [OKLCH Color Picker & Converter by Andrey Sitnik & Roman Shamin](https://oklch.com/#70,0.1,340,100)
 
