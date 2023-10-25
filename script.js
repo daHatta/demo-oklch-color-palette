@@ -67,3 +67,23 @@ infoHueBtn.addEventListener("click", () => {
     infoHueValue = infoHueInput.value;
     document.documentElement.style.setProperty("--hue-info", infoHueValue);
 });
+
+// Change light/dark-mode functionality
+const switchBtn = document.getElementById("mode-switcher");
+const sunIcon = document.getElementById("icon-sun");
+const moonIcon = document.getElementById("icon-moon");
+
+// Eventlistener on switch-button
+switchBtn.addEventListener("click", () => {
+
+    // variables
+    const rootElement = document.querySelector("html");
+    let currentValue = rootElement.getAttribute("data-mode");
+
+    // set opposite of current value
+    let newValue = (currentValue === "light") ? "dark" : "light";
+    // new value for data-mode
+    rootElement.setAttribute("data-mode", newValue);
+    // new value for localStorage
+    localStorage.setItem("mode", newValue);    
+})

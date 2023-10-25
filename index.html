@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-mode="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,17 @@
     <title>Demo for okLCH Color Palettes</title>
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="prefetch" href="./fonts/fontello.woff2" as="font" type="font/woff2" crossorigin>
+    <script>
+        // Setting mode by checking localStorage and OS preference
+        let localStorageItem = localStorage.getItem("mode");
+        let modeToSet = localStorageItem;
+
+        if (!localStorageItem) {
+            modeToSet = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+        }
+
+        document.documentElement.setAttribute("data-mode", modeToSet);
+    </script>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
@@ -25,7 +36,22 @@
                         <li><a class="nav-link" href="#">Contact Me</a></li>
                     </ul>
                 </nav>
-                <button type="button" class="btn btn-primary">Subscribe</button>
+                <div class="button-bar">
+                    <button type="button" class="btn btn-switch" title="Switch Mode" id="mode-switcher">
+                        <!-- Downloaded from: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                        <!-- Sun SVG Vector Icon 436 by krystonschwarze -->
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-sun">
+                            <g>
+                                <path style="stroke: var(--clr-icon-sun);stroke-width: 2;stroke-linecap: round;stroke-linejoin: round;" d="M12 4V2M12 20V22M6.41421 6.41421L5 5M17.728 17.728L19.1422 19.1422M4 12H2M20 12H22M17.7285 6.41421L19.1427 5M6.4147 17.728L5.00049 19.1422M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z" />
+                            </g>
+                        </svg>
+                        <!-- Moon SVG Vector 398 by Solar Icons -->
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-moon">
+                            <path style="fill: var(--clr-icon-moon);fill-rule: evenodd;clip-rule: evenodd;" d="M11.0174 2.80157C6.37072 3.29221 2.75 7.22328 2.75 12C2.75 17.1086 6.89137 21.25 12 21.25C16.7767 21.25 20.7078 17.6293 21.1984 12.9826C19.8717 14.6669 17.8126 15.75 15.5 15.75C11.4959 15.75 8.25 12.5041 8.25 8.5C8.25 6.18738 9.33315 4.1283 11.0174 2.80157ZM1.25 12C1.25 6.06294 6.06294 1.25 12 1.25C12.7166 1.25 13.0754 1.82126 13.1368 2.27627C13.196 2.71398 13.0342 3.27065 12.531 3.57467C10.8627 4.5828 9.75 6.41182 9.75 8.5C9.75 11.6756 12.3244 14.25 15.5 14.25C17.5882 14.25 19.4172 13.1373 20.4253 11.469C20.7293 10.9658 21.286 10.804 21.7237 10.8632C22.1787 10.9246 22.75 11.2834 22.75 12C22.75 17.9371 17.9371 22.75 12 22.75C6.06294 22.75 1.25 17.9371 1.25 12Z" />
+                        </svg>
+                    </button>
+                    <button type="button" class="btn btn-primary">Subscribe</button>
+                </div>
             </div>
         </div>
     </header>
@@ -40,7 +66,9 @@
                             Based on the Youtube GUI Challenge by <strong>Adam Argyleink</strong> <a href="https://www.youtube.com/watch?v=6aCsAMgwnjE" target="_blank"><i class="icon-youtube-play"></i></a>
                             and recommendations for color palettes by <strong>Jordan Bowman</strong> <a href="https://www.youtube.com/watch?v=yYwEnLYT55c" target="_blank"><i class="icon-youtube-play"></i></a>.
                             This template contains some dummy areas like a navbar, a hero section and several cards which are influenced by the color choice represented by the hue-value.
-                            For now it is possible to check the prefered color scheme (light or dark) by toogling the common rendering emulations under the dev tools.
+                            Use the dark/light-Button next to the Subscribe-Button in order to switch between the dark and light color mode. The implementation of the Dark Mode Switcher is based
+                            on the Envato Tuts+ made by <strong>Adi Purdila</strong> <a href="https://www.youtube.com/watch?v=Xk12JtYG8rw" target="_blank"><i class="icon-youtube-play"></i></a>,
+                            which uses localStorage for checking the preferences set by the user.
                         </p>
                         <button type="button" class="btn btn-cta">Call To Action</button>
                     </div>
@@ -350,7 +378,7 @@
                 </div>
             </div>
             <div class="footer-logo">
-                <svg width="4%" height="4%" viewBox="0 0 298 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                <svg width="48" height="48" viewBox="0 0 298 298" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                     <g>
                         <path style="fill:var(--clr-footer-logo);" d="M149,0.5c81.959,0 148.5,66.541 148.5,148.5c0,81.959 -66.541,148.5 -148.5,148.5c-81.959,0 -148.5,-66.541 -148.5,-148.5c0,-81.959 66.541,-148.5 148.5,-148.5Zm-10.03,92.372l32.309,-32.309l40.387,40.387c31.206,31.206 31.206,81.876 -0,113.082c-31.206,31.206 -81.877,31.206 -113.083,0l-0.223,-0.222l0.003,-0.003c-4.237,-4.474 -4.164,-11.546 0.22,-15.929c4.383,-4.384 11.456,-4.457 15.929,-0.22l0.003,-0.003l0.223,0.223c22.29,22.29 58.483,22.29 80.773,-0c22.29,-22.29 22.29,-58.484 -0,-80.774l-24.232,-24.232l-16.155,16.155l24.232,24.232c4.458,4.458 4.458,11.697 0,16.155c-4.458,4.458 -11.696,4.458 -16.154,-0l-24.232,-24.232l-16.155,16.154l24.232,24.232c4.458,4.458 4.458,11.697 -0,16.155c-4.458,4.458 -11.697,4.458 -16.155,0l-24.232,-24.232l-24.525,24.526l-0.006,-0.006c-4.476,4.168 -11.496,4.072 -15.855,-0.288c-4.36,-4.36 -4.456,-11.379 -0.289,-15.856l-0.005,-0.005l24.526,-24.526l-24.232,-24.232c-4.458,-4.458 -4.458,-11.696 -0,-16.154c4.458,-4.458 11.696,-4.458 16.154,-0l24.232,24.232l16.155,-16.155l-24.232,-24.232c-4.458,-4.458 -4.458,-11.697 -0,-16.155c4.458,-4.458 11.697,-4.458 16.155,0l24.232,24.232Z">
                     </g>
